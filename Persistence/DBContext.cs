@@ -17,7 +17,7 @@ namespace Presistence.Entities
 {
     public class DBContext : DbContext, IDBContext
     {
-        public DbSet<ConfigTBL> ConfigTBLs { get; set; }
+        public DbSet<ConfigTBL> ConfigTBLs { get; set; }//454
 
         public class BloggingContextfactory : IDesignTimeDbContextFactory<DBContext>
         {
