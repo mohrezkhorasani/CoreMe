@@ -25,7 +25,7 @@ namespace Presistence.Entities
             {
                 var optioonbuilder = new DbContextOptionsBuilder<DBContext>();
 
-                optioonbuilder.UseSqlServer(@"Data Source=31.25.91.22;Initial Catalog=aa;User ID=w;Password=pass;TrustServerCertificate=True", builder =>
+                optioonbuilder.UseSqlServer(@"Data Source=87.107.144.40;Initial Catalog=PiepaOTPHandler;User ID=PiepaOTPHandlerUser;Password=Jq02Z$p2J-z%3yo;TrustServerCertificate=True", builder =>
                 {
                     builder.EnableRetryOnFailure(5, TimeSpan.FromSeconds(10), null);
                 });
