@@ -21,6 +21,6 @@
          **/
         public int Type { get; set; }
         public string Explain { get; set; }
-        public long DateInsert { get; set; }
+        public DateTime DateInsert { get; set; }
     }
 }
