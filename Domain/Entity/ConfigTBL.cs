@@ -12,7 +12,7 @@ namespace Domain.Entity
         public int Status { get; set; }
         public int Type { get; set; }
         public string Explain { get; set; }
-        public long DateInsert { get; set; }
+        public DateTime DateInsert { get; set; }
         public string Key { get; set; }
         public string Value { get; set; }   
     }
