@@ -32,7 +32,12 @@ namespace Persistence.Migrations
                     b.Property<long>("DateInsert")
                         .ValueGeneratedOnAdd()
                         .HasColumnType("bigint")
-                        .HasDefaultValueSql("CONVERT(varchar, SYSDATETIME(), 121)");
+                        .HasColumnName("DateInsert")
+                        .HasDefaultValueSql("DATEDIFF_BIG(MILLISECOND, '1970-01-01', SYSUTCDATETIME())");
+
+                    b.Property<long>("DateUpdate")
+                        .HasColumnType("bigint")
+                        .HasColumnName("DateUpdate");
 
                     b.Property<string>("Explain")
                         .HasMaxLength(3000)

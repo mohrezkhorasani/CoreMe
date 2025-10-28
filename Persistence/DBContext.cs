@@ -25,7 +25,7 @@ namespace Presistence.Entities
             {
                 var optioonbuilder = new DbContextOptionsBuilder<DBContext>();
 
-                optioonbuilder.UseSqlServer(@"Data Source=201.414.111.22;Initial Catalog=dbname;User ID=user;Password=pass;TrustServerCertificate=True", builder =>
+                optioonbuilder.UseSqlServer(@"Data Source=;Initial Catalog=eitherir_test;User ID=eitherir_affatest;Password=;TrustServerCertificate=True", builder =>
                 {
                     builder.EnableRetryOnFailure(5, TimeSpan.FromSeconds(10), null);
                 });
@@ -52,6 +52,15 @@ namespace Presistence.Entities
         }
 
 
+        public static long ToUnixTimestamp(DateTime dateTime)
+        {
+            // تبدیل به تیک‌های یونیکس (میلی‌ثانیه از 1970)
+            return new DateTimeOffset(dateTime.ToUniversalTime()).ToUnixTimeMilliseconds();
+        }
 
+        public static DateTime FromUnixTimestamp(long timestamp)
+        {
+            return DateTimeOffset.FromUnixTimeMilliseconds(timestamp).UtcDateTime;
+        }
     }
 }

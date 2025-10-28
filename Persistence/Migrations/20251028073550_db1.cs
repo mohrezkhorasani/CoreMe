@@ -23,7 +23,8 @@ namespace Persistence.Migrations
                     Status = table.Column<int>(type: "int", nullable: false, defaultValue: 100),
                     Type = table.Column<int>(type: "int", nullable: false, defaultValue: 1),
                     Explain = table.Column<string>(type: "nvarchar(3000)", maxLength: 3000, nullable: true),
-                    DateInsert = table.Column<long>(type: "bigint", nullable: false, defaultValueSql: "CONVERT(varchar, SYSDATETIME(), 121)"),
+                    DateInsert = table.Column<long>(type: "bigint", nullable: false, defaultValueSql: "DATEDIFF_BIG(MILLISECOND, '1970-01-01', SYSUTCDATETIME())"),
+                    DateUpdate = table.Column<long>(type: "bigint", nullable: false),
                     Key = table.Column<string>(type: "nvarchar(max)", nullable: false),
                     Value = table.Column<string>(type: "nvarchar(max)", nullable: false)
                 },

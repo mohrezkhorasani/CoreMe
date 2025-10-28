@@ -1,6 +1,8 @@
-﻿namespace Domain.Entity
+﻿using Domain.Interfaces;
+
+namespace Domain.Entity
 {
-    public interface MainEntity
+    public interface MainEntity: IHasTimestamps
     {
         public int ID { get; set; }
         /** Statuses: >0 => ok 
@@ -22,5 +24,6 @@
         public int Type { get; set; }
         public string Explain { get; set; }
         public DateTime DateInsert { get; set; }
+        public DateTime DateUpdate { get; set; }
     }
 }
