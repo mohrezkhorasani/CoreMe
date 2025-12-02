@@ -1,5 +1,4 @@
-﻿using Application.Interfaces;
-using Microsoft.EntityFrameworkCore;
+﻿using Microsoft.EntityFrameworkCore;
 using System;
 using Microsoft.EntityFrameworkCore.Design;
 
@@ -12,8 +11,10 @@ using System.Threading;
 using Domain.Entity;
 using System.ComponentModel.Design;
 using Microsoft.Extensions.Options;
+using Application.Interface;
+using Presistence.Entities;
 
-namespace Presistence.Entities
+namespace Persistence
 {
     public class DBContext : DbContext, IDBContext
     {

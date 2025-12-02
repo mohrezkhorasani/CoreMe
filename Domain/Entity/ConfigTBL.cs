@@ -9,8 +9,8 @@ namespace Domain.Entity
     public class ConfigTBL : MainEntity
     {
         public int ID { get; set; }
-        public int Status { get; set; }
-        public int Type { get; set; }
+        public MainEntityStatus Status { get; set; }
+        public MainEntityType Type { get; set; }
         public string Explain { get; set; }
         public DateTime DateInsert { get; set; }
         public DateTime DateUpdate { get; set; }

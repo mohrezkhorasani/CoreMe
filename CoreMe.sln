@@ -1,7 +1,7 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio Version 17
-VisualStudioVersion = 17.5.33516.290
+# Visual Studio Version 18
+VisualStudioVersion = 18.0.11222.15 d18.0
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CoreMe", "CoreMe\CoreMe.csproj", "{A3A64BE0-1201-4A87-8E90-876EAE55F930}"
 EndProject
@@ -18,6 +18,12 @@ EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Infrastructure", "Infrastructure\Infrastructure.csproj", "{14D40B50-8C22-4B3F-B215-1DFF8EBDE3E4}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Core", "Core", "{2C2F35D6-C1F2-4996-8184-22A978F207AE}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TelegramServiceLog", "TelegramServiceLog\TelegramServiceLog.csproj", "{6C7240F2-091F-90E7-EB8E-590620193F59}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Extensions", "Extensions\Extensions.csproj", "{9720D4F4-E579-990E-EF0D-62C18E598505}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Tools", "Tools", "{9BD5475E-165C-458F-9A73-594668CC11A8}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -45,6 +51,14 @@ Global
 		{14D40B50-8C22-4B3F-B215-1DFF8EBDE3E4}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{14D40B50-8C22-4B3F-B215-1DFF8EBDE3E4}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{14D40B50-8C22-4B3F-B215-1DFF8EBDE3E4}.Release|Any CPU.Build.0 = Release|Any CPU
+		{6C7240F2-091F-90E7-EB8E-590620193F59}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{6C7240F2-091F-90E7-EB8E-590620193F59}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{6C7240F2-091F-90E7-EB8E-590620193F59}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{6C7240F2-091F-90E7-EB8E-590620193F59}.Release|Any CPU.Build.0 = Release|Any CPU
+		{9720D4F4-E579-990E-EF0D-62C18E598505}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{9720D4F4-E579-990E-EF0D-62C18E598505}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{9720D4F4-E579-990E-EF0D-62C18E598505}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{9720D4F4-E579-990E-EF0D-62C18E598505}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -55,6 +69,8 @@ Global
 		{16AF928F-EA0B-4AFB-B0EA-B5D116B7F2C3} = {2C2F35D6-C1F2-4996-8184-22A978F207AE}
 		{DBC8002C-711C-4EB8-B9C4-61127C23556D} = {967506B0-51A9-4A59-9664-C3AEF0800419}
 		{14D40B50-8C22-4B3F-B215-1DFF8EBDE3E4} = {967506B0-51A9-4A59-9664-C3AEF0800419}
+		{6C7240F2-091F-90E7-EB8E-590620193F59} = {967506B0-51A9-4A59-9664-C3AEF0800419}
+		{9720D4F4-E579-990E-EF0D-62C18E598505} = {9BD5475E-165C-458F-9A73-594668CC11A8}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {A53ABC9D-DAF8-4B86-B792-07B2A7EC4399}

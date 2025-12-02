@@ -1,4 +1,4 @@
-﻿using Application.Interfaces;
+﻿using Application.Interface;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.Extensions.Configuration;
 using System;
@@ -14,16 +14,16 @@ namespace Application.General
         public IConfiguration _configuration { get; }
         public IDBContext _db { get; }
         public IDBContext _db1 { get; }
-        private IHostingEnvironment _hosting;
+        private IWebHostEnvironment _hosting;
 
-        public CommonMethods(IConfiguration configuration, IDBContext db, IHostingEnvironment hosting)
+        public CommonMethods(IConfiguration configuration, IDBContext db, IWebHostEnvironment hosting)
         {
             _configuration = configuration;
             _db = db;
             _hosting = hosting;
         }
 
-        public CommonMethods(IConfiguration configuration, IDBContext db, IDBContext db1, IHostingEnvironment hosting)
+        public CommonMethods(IConfiguration configuration, IDBContext db, IDBContext db1, IWebHostEnvironment hosting)
         {
             _configuration = configuration;
             _db = db;

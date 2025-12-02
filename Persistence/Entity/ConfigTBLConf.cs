@@ -19,6 +19,7 @@ using Microsoft.EntityFrameworkCore;
 
 using Microsoft.EntityFrameworkCore.Metadata.Builders;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
+using Persistence;
 using System;
 
 using System.Collections.Generic;
@@ -33,13 +34,13 @@ namespace Presistence.Entities
         public void Configure(EntityTypeBuilder<ConfigTBL> builder)
 
         {
-            builder.ToTable("ConfigTBL", "GeneralInfo");
+            builder.ToTable("ConfigTBL",Schema.SCHEMA_GENERAL);
 
             builder.HasKey(x => x.ID);
 
             builder.Property(e => e.Explain).IsRequired(false).HasMaxLength(3000);
-            builder.Property(e => e.Status).HasDefaultValue(100);
-            builder.Property(e => e.Type).HasDefaultValue(1);
+            builder.Property(e => e.Status).HasDefaultValue(MainEntityStatus.Normal);
+            builder.Property(e => e.Type).HasDefaultValue(MainEntityType.Normal);
             builder.Property(e => e.DateUpdate)
                 .HasConversion(
                    v => new DateTimeOffset(v.ToUniversalTime()).ToUnixTimeMilliseconds(),

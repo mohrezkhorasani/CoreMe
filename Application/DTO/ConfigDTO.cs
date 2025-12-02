@@ -11,14 +11,14 @@ namespace Application.DTO
    
 
 
-    #region ApplicationVersion
-    public class ApplicationVersionRequest : BaseParentRequest, IUseCaseRequest<GenericResponse<ApplicationVersionResponse>>
+    #region GetConfig
+    public class GetConfigRequest : BaseParentRequest, IUseCaseRequest<GenericResponse<GetConfigResponse>>
     {
-        public int VersionCode { get; set; }
+        public string Key { get; set; }
 
     }
 
-    public class ApplicationVersionResponse : BaseParentResponce
+    public class GetConfigResponse : BaseParentResponce
     {
         
     }

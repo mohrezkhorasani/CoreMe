@@ -1,9 +1,9 @@
 ﻿using Application.DTO;
 using Application.DTO.Generals;
 using Application.General;
+using Application.Interface;
 using Application.Interface.IInfrastructure;
 using Application.Interface.IUsecase;
-using Application.Interfaces;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.Extensions.Configuration;
 using System;
@@ -14,26 +14,27 @@ using System.Threading.Tasks;
 
 namespace Application.Usecase
 {
-    #region ApplicationVersion
-    public class ApplicationVersionUseCase : IApplicationVersionUseCase
+    #region GetConfig
+    public class GetConfigUseCase : IGetConfigUseCase
     {
         public IDBContext _repository { get; }
         public CommonMethods _commonMethods { get; }
-        private IHostingEnvironment hosting;
+        private readonly IWebHostEnvironment hosting;
 
-        public ApplicationVersionUseCase(IDBContext repository,
-            IConfiguration configuration)
+        public GetConfigUseCase(IDBContext repository,
+            IConfiguration configuration, IWebHostEnvironment hosting)
         {
             _repository = repository;
+            this.hosting = hosting;
             _commonMethods = new CommonMethods(configuration, repository, hosting);
         }
 
-        public async Task handleAsync(ApplicationVersionRequest message,
-            IOutPutPort<GenericResponse<ApplicationVersionResponse>> outputPort)
+        public async Task handleAsync(GetConfigRequest message,
+            IOutPutPort<GenericResponse<GetConfigResponse>> outputPort)
         {
 
-            outputPort.Handle(new GenericResponse<ApplicationVersionResponse>
-       (new ApplicationVersionResponse
+            outputPort.Handle(new GenericResponse<GetConfigResponse>
+       (new GetConfigResponse
        {
            Message = "ok",
            Status = 200,
